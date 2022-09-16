@@ -17,11 +17,11 @@
 </head>
 
 <body>
-    <div class="content">
-        <header class="header container">
-            <h1 class="header__title">
-                <a href="/">Marie Jackson</a>
-            </h1>
+    <header class="header container">
+        <h1 class="header__title">
+            <a href="/">Marie Jackson</a>
+        </h1>
+        <nav>
             <ul class="header__links">
                 <li>
                     <a class="header__link" href="/about">About</a>
@@ -33,12 +33,13 @@
                     <a class="header__link" href="/contact">Contact</a>
                 </li>
             </ul>
-        </header>
-        <main class="main container">
-            {{ content | safe }}
-        </main>
+        </nav>
+    </header>
+    <main class="main container">
+        {{ content | safe }}
+    </main>
     </div>
-    <footer class="footer">
+    <footer class="footer container">
         <p>&copy; Marie Jackson 2022</p>
     </footer>
 </body>

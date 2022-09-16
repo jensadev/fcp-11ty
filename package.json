@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "eleventy --serve",
+        "watch:sass": "sass --watch src/sass:public/css",
         "build": "eleventy"
     },
     "keywords": [],
