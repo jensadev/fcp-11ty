@@ -90,6 +90,7 @@ h2 {
 }
 
 .projects {
+    margin-top: var(--step-2);
 }
 
 .project-grid {
@@ -115,4 +116,22 @@ h2 {
 
 .hidden {
     display: none;
+}
+
+.form {
+    &__section {
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        width: 100%;
+    }
+    &__button {
+        width: 100%;
+        padding: var(--step--1);
+    }
+}
+
+.footer {
+    padding: var(--step-2) 0;
 }
