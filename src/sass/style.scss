@@ -1,3 +1,5 @@
+@use "reset";
+
 :root {
     --fluid-min-width: 320px;
     --fluid-mid-width: 666px;
@@ -13,7 +15,30 @@
     --step-5: clamp(5.52rem, calc(5.22rem + 1.54vw), 6.31rem);
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+}
+
 .container {
     width: min(var(--fluid-mid-width), 100vw - var(--step-1));
     margin-inline: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--step-0) 0;
+    &__nav {
+        &-links {
+            display: flex;
+            list-style: none;
+        }
+        &-link {
+            padding-left: var(--step-0);
+        }
+    }
+}
+
+.main {
+
 }
