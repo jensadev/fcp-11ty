@@ -25,6 +25,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
     eleventyConfig.addNunjucksAsyncShortcode("EleventyImage", imageShortcode);
 
+    eleventyConfig.addFilter('imageUrl', (imageObj) => {
+        if (imageObj.title.length > 0) {
+            return imageObj.date + imageObj.title;
+        } else {
+            return imageObj.date + imageObj.description;
+        }
+        // return title.length > 0 ? title : description;
+    });
+
     return {
         dir: {
             input: 'src',

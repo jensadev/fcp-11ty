@@ -1,0 +1,18 @@
+---
+title: Eleventy Portfolio
+layout: base.njk
+---
+
+<h2 class="gallery__heading">Image gallery</h2>
+<div class="gallery-list">
+    <ul class="smol-aspect-ratio-gallery smol-flexbox-grid">
+        {% asyncEach image in images %}
+        {% set url = "gallery/" + image.image_url %}
+        <li>
+            <a href="/gallery/image/{{ image | imageUrl | slug }}/">
+                {% EleventyImage url, image.description, "(min-width: 30em) 50vw, 100vw" %}
+            </a>
+        </li>
+        {% endeach %}
+    </ul>
+</div>

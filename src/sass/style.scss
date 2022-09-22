@@ -1,5 +1,6 @@
 @use "reset";
 @use "flow";
+@use "gallery";
 
 :root {
     --fluid-min-width: 320px;
@@ -41,10 +42,6 @@ h2 {
             padding-left: var(--step-0);
         }
     }
-}
-
-.main {
-
 }
 
 .profile {
